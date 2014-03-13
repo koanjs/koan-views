@@ -6,6 +6,7 @@
 var debug = require('debug')('koan-views');
 var render = require('co-render');
 var path = require('path');
+var co = require('co');
 
 /**
  * Environment
@@ -73,11 +74,18 @@ module.exports = function(dir, options) {
     // Resolve view
     view = path.join(dir, view);
 
+    var renderBody;
+
     if (layout) {
       debug('render %s %j', view, locals);
        
-      // @todo yield
-      locals.body = 'Yield to rendering!';//render(view, locals);
+      // Yielded view rendering
+      renderBody = co(function*() {
+        debug('render %s %j', view, locals);
+        var body = yield render(view, locals);
+
+        return body;
+      });
 
       // Resolve layout
       layout = path.join(dir, layout);
@@ -85,7 +93,20 @@ module.exports = function(dir, options) {
     else
       layout = view;
 
-    debug('render %s %j', layout, locals);
-    return render(layout, locals);
+    return function(done) {
+      if (renderBody) {
+        renderBody(function(err, body) {
+          if (err)
+            return done(err);
+
+          locals.body = body;
+
+          debug('render %s %j', layout, locals);
+          render(layout, locals)(done);
+        });
+      }
+      else
+        render(layout, locals)(done);
+    }
   };
 };

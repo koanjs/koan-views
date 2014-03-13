@@ -20,7 +20,8 @@
   ],
   "dependencies": {
     "co-views": "~0.2.0",
-    "co-render": "0.0.1"
+    "co-render": "0.0.1",
+    "co": "^3.0.4"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
