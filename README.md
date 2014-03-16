@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/bredikhin/koan-views.png?branch=master)](https://travis-ci.org/bredikhin/koan-views)
 [![Dependency Status](https://gemnasium.com/bredikhin/koan-views.png)](https://gemnasium.com/bredikhin/koan-views)
-[![Code Climate](https://codeclimate.com/github/bredikhin/koan-views.png)](https://codeclimate.com/github/bredikhin/koan-views)
 [![Coverage Status](https://coveralls.io/repos/bredikhin/koan-views/badge.png?branch=master)](https://coveralls.io/r/bredikhin/koan-views?branch=master)
 [![NPM version](https://badge.fury.io/js/koan-views.png)](http://badge.fury.io/js/koan-views)
 
