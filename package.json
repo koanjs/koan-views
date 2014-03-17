@@ -21,7 +21,8 @@
   "dependencies": {
     "co-views": "~0.2.0",
     "co-render": "0.0.1",
-    "co": "^3.0.4"
+    "co": "^3.0.4",
+    "debug": "^0.7.4"
   },
   "devDependencies": {
     "mocha": "~1.18.0",
@@ -30,7 +31,6 @@
     "istanbul": "https://github.com/gotwarlost/istanbul/archive/harmony.tar.gz",
     "coveralls": "~2.8.0",
     "pre-commit": "0.0.4",
-    "debug": "^0.7.4",
     "ejs": "^0.8.5"
   },
   "scripts": {
