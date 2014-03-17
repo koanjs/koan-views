@@ -46,9 +46,25 @@ describe('View renderer', function() {
     });
   });
 
-  it('should render views with default layout overriden');
+  it('should render views with default layout overriden', function(done) {
+    var renderer = views(
+      path.join(process.cwd(), 'test', 'fixtures', 'views'),
+      { default: 'ejs', defaultLayout: 'layout' }
+    );
 
-  it('should work with layout specified without local variables');
+    var template = renderer('view', { msg: 'Hello, World!' }, 'another-layout');
+
+    template(function(err, html) {
+      if (err)
+        return done(err);
+
+      html.should.containEql('Hello, World!');
+      html.should.not.containEql('From the default layout: ');
+      html.should.containEql('From another layout: ');
+
+      done();
+    });
+  });
 
   it('should work with layout specified without local variables');
 });
