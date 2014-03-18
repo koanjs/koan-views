@@ -52,6 +52,12 @@ module.exports = function(dir, options) {
     locals = locals || {};
     layout = layout || defaultLayout;
 
+    // Make `locals` optional
+    if ((typeof locals == 'string')||(locals instanceof String)) {
+      layout = locals;
+      locals = {};
+    }
+
     // Default extname
     var e = path.extname(view);
 
