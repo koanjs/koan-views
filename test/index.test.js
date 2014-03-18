@@ -66,6 +66,23 @@ describe('View renderer', function() {
     });
   });
 
-  it('should work with layout specified without local variables');
+  it('should work with layout specified without local variables', function(done) {
+    var renderer = views(
+      path.join(process.cwd(), 'test', 'fixtures', 'views'),
+      { default: 'ejs', defaultLayout: 'layout' }
+    );
+
+    var template = renderer('no-locals', 'another-layout');
+
+    template(function(err, html) {
+      if (err)
+        return done(err);
+
+      html.should.containEql('Works without locals too!');
+      html.should.containEql('From another layout: ');
+
+      done();
+    });
+  });
 });
 
