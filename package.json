@@ -1,6 +1,6 @@
 {
   "name": "koan-views",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enhanced template rendering using ES6 generators",
   "keywords": [
     "koa",
