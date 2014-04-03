@@ -1,6 +1,6 @@
 {
   "name": "koan-views",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Enhanced template rendering using ES6 generators",
   "keywords": [
     "koa",
@@ -43,10 +43,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com:bredikhin/koan-views.git"
+    "url": "git://github.com:koanjs/koan-views.git"
   },
   "bugs": {
-    "url": "http://github.com/bredikhin/koan-views/issues"
+    "url": "http://github.com/koanjs/koan-views/issues"
   },
   "author": "Ruslan Bredikhin",
   "license": {
