@@ -21,13 +21,13 @@
   "dependencies": {
     "co-views": "^0.2.0",
     "co-render": "0.0.1",
-    "co": "^3.0.5",
-    "debug": "^0.8.1"
+    "co": "^3.0.6",
+    "debug": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "^1.18.2",
-    "should": "~3.3.1",
-    "supertest": "^0.12.0",
+    "mocha": "^1.20.0",
+    "should": "~4.0.1",
+    "supertest": "^0.13.0",
     "istanbul": "https://github.com/gotwarlost/istanbul/archive/harmony.tar.gz",
     "coveralls": "^2.10.0",
     "pre-commit": "0.0.7",
